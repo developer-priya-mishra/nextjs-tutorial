@@ -1,5 +1,5 @@
-const Product = async ({ params }: { params: { productID: string } }) => {
-    const { productID } = params; // Destructure productID directly from params
+const Product = async ({ params }: { params: Promise <{ productID: string }> }) => {
+    const { productID } = await params; // Destructure productID directly from params
     return (
         <>
             <h1>Detailed Product Page for {productID}</h1>

@@ -1,5 +1,5 @@
-const Review = async ({ params }: { params: { productID: string,reviewID: string } }) => {
-    const { productID , reviewID} = params; 
+const Review = async ({ params }: { params: Promise<{ productID: string,reviewID: string }> }) => {
+    const { productID , reviewID} =await params; 
     return (
         <>
             <h1>Review {reviewID} for product {productID}</h1>
